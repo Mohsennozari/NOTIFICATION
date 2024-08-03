@@ -6,7 +6,7 @@
 }
 
 body {
-    background: rgb(66, 139, 132);
+    background: rgb(45, 79, 143);
 }
 
 .buttons {
@@ -23,6 +23,7 @@ body {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+    margin-top: 8px;
 }
 
 #toastBow {
@@ -34,13 +35,15 @@ body {
     flex-direction: column;
     overflow: hidden;
     padding: 20px;
-}
+     }
 .toast{
     width:400px;
     height:80px;
-    background:#fff;
-    margin:15px 0;
-    font-weight:500;
+    background-color: rgba($color: #ffffff, $alpha: 0.70);
+    border-radius: 5px;
+    margin:15px 5px;
+    font-weight:200;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
     position:relative;
     transform: translateX(100%);
@@ -72,5 +75,8 @@ animation:anim 5s linear forwards;
     background-color: red;
 }
 .toast.invalid::after{
-    background-color: orange;
+    background: orange;
+}
+.fa-solid{
+    margin: 10px;
 }

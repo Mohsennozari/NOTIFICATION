@@ -1,17 +1,18 @@
 let toastBox = document.getElementById('toastBox');
-let successMasage = '<a href="https://www.flaticon.com/free-icons/yes" title="yes icons">Yes icons created by hqrloveq - Flaticon</a>successully submited';
-let errorMasage = '<a href="https://www.flaticon.com/free-icons/cross" title="cross icons">Cross icons created by hqrloveq - Flaticon</a>please fix the error';
-let invalidMasage = '<a href="https://www.flaticon.com/free-icons/atention" title="atention icons">Atention icons created by riajulislam - Flaticon</a>invalid input , check agine';
+let successMsg = '<i class="fa-solid fa-circle-check" style="color: #079c6f;"></i>successully submited';
+let errorMsg = '<i class="fa-solid fa-circle-xmark" style="color: #ff0000;"></i>please fix the error';
+let invalidMsg = '<i class="fa-solid fa-circle-exclamation" style="color: #ff9500;"></i>invalid input , check agine';
 
-function showToast(masage){
+function showToast(msg){
     let toast = document.createElement('div');
     toast.classList.add('toast');
-    toast.innerHTML = 'masage';
+    toast.innerHTML = msg;
     toastBox.appendChild(toast);
-    if(masage.includes('error')){
-         toast.classList.add('toast');
-    } if(masage.includes('invalide')){
-         toast.classList.add('invalide');
+    if(msg.includes('error')){
+         toast.classList.add('error');
+    }
+    if(msg.includes('invalid')){
+         toast.classList.add('invalid');
     }
     setTimeout(() => {
         toast.remove();
